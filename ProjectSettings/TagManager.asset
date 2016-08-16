@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Friendlies
+  - Enemies
+  - FriendlyProjectiles
+  - EnemyProjectiles
+  - Obstacles
+  - Powerups
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Thrusters
+    uniqueID: 3703374387
+    locked: 0
+  - name: Projectiles
+    uniqueID: 707652255
+    locked: 0
+  - name: Powerups
+    uniqueID: 330256225
+    locked: 0
+  - name: Enemies
+    uniqueID: 3181526323
+    locked: 0
+  - name: Player
+    uniqueID: 3884536471
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2855274049
+    locked: 0

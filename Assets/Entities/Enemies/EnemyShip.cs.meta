@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: a04fff30f8699e14fb9536911b8e64f7
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - hitSound: {fileID: 8300000, guid: 2ee78b5fb3c71d64884e002cc59a5f7c, type: 3}
+  - deathSound: {fileID: 8300000, guid: cce4768b5b63ce7468228332a681561f, type: 3}
+  - deathExplosion: {fileID: 124752, guid: 99a0d91262b84a14aaa560cea54a4132, type: 2}
+  - basicLaser: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
