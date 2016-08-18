@@ -3,21 +3,18 @@ using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 
-    private GameObject[] objectsToPause;
     private GameObject[] pauseMenuObjects;
 
     private bool gamePaused = false;
 
-    // Use this for initialization
-	void Start () {
+	void Awake() {
         pauseMenuObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         HidePauseMenu();
+        Time.timeScale = 1f;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            objectsToPause = GameObject.FindGameObjectsWithTag("AffectedByPause");
 
             if (gamePaused) {
                 ResumeGame();
@@ -30,10 +27,7 @@ public class PauseMenu : MonoBehaviour {
     public void PauseGame() {
         Debug.Log("Game paused");
 
-        foreach (GameObject obj in objectsToPause) {
-            obj.SendMessage("OnPauseGame", SendMessageOptions.DontRequireReceiver);
-        }
-
+        Time.timeScale = 0f;
         ShowPauseMenu();
         gamePaused = true;
     }
@@ -41,11 +35,8 @@ public class PauseMenu : MonoBehaviour {
     public void ResumeGame() {
         Debug.Log("Game resumed");
 
-        foreach (GameObject obj in objectsToPause) {
-            obj.SendMessage("OnResumeGame", SendMessageOptions.DontRequireReceiver);
-        }
-
         HidePauseMenu();
+        Time.timeScale = 1f;
         gamePaused = false;
     }
 

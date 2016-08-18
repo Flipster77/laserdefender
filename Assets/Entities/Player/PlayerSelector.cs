@@ -5,6 +5,7 @@ using System.Collections;
 public class PlayerSelector : MonoBehaviour {
 
 	public GameObject[] playerShips;
+    public GameObject[] shipDescriptions;
 	
 	public bool selectionScreen;
 	
@@ -36,16 +37,6 @@ public class PlayerSelector : MonoBehaviour {
 		return playerShips[currentShipIndex];
 	}
 	
-	public void NextShip() {
-		if (currentShipIndex+1 < playerShips.Length) {
-			ChooseShip(currentShipIndex+1);
-		}
-	}
-	
-	public void PreviousShip() {
-		
-	}
-	
 	public void ChooseShip(int index) {
 		if (index < playerShips.Length) {
 			currentShipIndex = index;
@@ -71,7 +62,8 @@ public class PlayerSelector : MonoBehaviour {
 		
 		UpdateShipImage();
 		UpdateShipName();
-		UpdateShipSpeed();
+        UpdateShipDescription();
+        UpdateShipSpeed();
 		UpdateShipLasers();
 		UpdateShipHealth();
 		UpdateActiveButtons();
@@ -85,6 +77,14 @@ public class PlayerSelector : MonoBehaviour {
 	private void UpdateShipName() {
 		shipName.text = currentShip.shipName;
 	}
+
+    private void UpdateShipDescription() {
+        foreach (GameObject description in shipDescriptions) {
+            description.SetActive(false);
+        }
+
+        shipDescriptions[currentShipIndex].SetActive(true);
+    }
 	
 	private void UpdateShipSpeed() {
 		string speed = "<SPEED>";
@@ -101,7 +101,7 @@ public class PlayerSelector : MonoBehaviour {
 	}
 	
 	private void UpdateShipLasers() {
-		string lasers = "<SPEED>";
+		string lasers = "<LASERS>";
 		
 		Laser basicLaser = currentShip.basicLaser.GetComponent<Laser>();
 		
@@ -116,7 +116,7 @@ public class PlayerSelector : MonoBehaviour {
 	}
 	
 	private void UpdateShipHealth() {
-		shipHealth.text = "Health: " + currentShip.maxHealth;
+		shipHealth.text = "Hull Strength: " + currentShip.maxHealth;
 	}
 	
 	private void UpdateActiveButtons() {

@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		
-		if (currentWave.WaveIsComplete()) {
+		if (currentWave == null || currentWave.WaveIsComplete()) {
 			//Debug.Log("Wave " + WaveCounter.GetWaveNumber() + " is complete");
 			StartNextWave();
 		}

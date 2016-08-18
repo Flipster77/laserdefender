@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MusicPlayer : MonoBehaviour {
@@ -34,17 +35,15 @@ public class MusicPlayer : MonoBehaviour {
 		
 		AudioClip newClip = music.clip;
 		
+        /*
+         * Note: Need to keep this switch statement updated when scenes are
+         *       added to the build settings.
+         */
 		switch(level) {
-			case 0:
-				newClip = startClip;
-				break;
-			case 1:
-				newClip = startClip;
-				break;
-			case 2:
+			case 5:
 				newClip = gameClip;
 				break;
-			case 3:
+			case 6:
 				newClip = endClip;
 				break;
 			default:
