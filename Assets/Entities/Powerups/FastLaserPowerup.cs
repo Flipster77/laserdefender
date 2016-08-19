@@ -5,9 +5,9 @@ public class FastLaserPowerup : Powerup {
 
 	public AudioClip collectSound;
 
-	public const string powerupTag = "FastLaser";
+	private const string powerupTag = "FastLaser";
 	private const float firingRateMultiplier = 10f;
-	private const int powerupTime = 10;
+	private const float powerupTime = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -23,20 +23,24 @@ public class FastLaserPowerup : Powerup {
 		PlayerShip playerShip = other.GetComponent<PlayerShip>();
 		
 		if (playerShip != null) {
+
+            // If the ship doesn't already have the powerup, start the effect
 			if (!playerShip.HasPowerup(powerupTag)) {
-				ActivatePowerup(playerShip);
+				StartPowerupEffect(playerShip);
 			}
-			
-			// Play sound and destroy game object
-			AudioSource.PlayClipAtPoint(collectSound, transform.position, 1.0f);
+
+            // Notify the ship that the powerup is active/extend the powerup time
+            playerShip.PowerupReceived(powerupTag, powerupTime, StopPowerupEffect);
+
+            // Play sound and destroy game object
+            AudioSource.PlayClipAtPoint(collectSound, transform.position, 1.0f);
 			Destroy(gameObject);
 		}
 	}
 	
-	public override void ActivatePowerup(PlayerShip playerShip) {
+	public override void StartPowerupEffect(PlayerShip playerShip) {
 		playerShip.firingRate = playerShip.firingRate * firingRateMultiplier;
 		Debug.Log("Firing rate set to " + playerShip.firingRate);
-		playerShip.PowerupActive(powerupTag, powerupTime, StopPowerupEffect);
 	}
 	
 	

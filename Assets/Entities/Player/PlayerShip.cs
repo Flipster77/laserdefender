@@ -10,12 +10,12 @@ public class PlayerShip : Ship {
 	
 	public int numShotsPerFire = 1;
 	
-	private HashSet<string> currentPowerups;
+	private Dictionary<string, float> currentPowerups;
 
 	// Use this for initialization
 	void Start () {
 		InitialiseVariables(true);
-		currentPowerups = new HashSet<string>();
+		currentPowerups = new Dictionary<string, float>();
 		SetupBoundaries();		
 	}
 	
@@ -112,19 +112,36 @@ public class PlayerShip : Ship {
 	}
 	
 	public bool HasPowerup(string powerupTag) {
-		return currentPowerups.Contains(powerupTag);
+		return currentPowerups.ContainsKey(powerupTag);
 	}
 	
-	public void PowerupActive(string powerupTag, int effectLength, Action<PlayerShip> stopEffectMethod) {
-		// Add powerup tag to collection
-		currentPowerups.Add(powerupTag);
+	public void PowerupReceived(string powerupTag, float effectLength, Action<PlayerShip> stopEffectMethod) {
+
+        // If the ship already has the powerup, reset the powerup timer
+		if (currentPowerups.ContainsKey(powerupTag)) {
+            currentPowerups[powerupTag] = effectLength;
+            Debug.Log(powerupTag + " effect extended at: " + Time.timeSinceLevelLoad);
+        }
+        // Otherwise start the powerup timer
+        else {
+            currentPowerups.Add(powerupTag, effectLength);
+            Debug.Log(powerupTag + " effect started at: " + Time.timeSinceLevelLoad);
+
+            // Start a coroutine to stop the powerup effect after its timer runs out
+            StartCoroutine(StopPowerupEffect(powerupTag, effectLength, stopEffectMethod));
+        }
+        
+        
+	}
+	
+	private IEnumerator StopPowerupEffect(string powerupTag, float effectLength, Action<PlayerShip> stopEffectMethod) {
 		
-		// Stop the powerup after the effect finishes
-		StartCoroutine(StopPowerupEffect(powerupTag, effectLength, stopEffectMethod));
-	}
-	
-	private IEnumerator StopPowerupEffect(string powerupTag, int effectLength, Action<PlayerShip> stopEffectMethod) {
-		yield return new WaitForSeconds(effectLength);
+        while (currentPowerups[powerupTag] > 0) {
+            currentPowerups[powerupTag] -= Time.deltaTime;
+            yield return null;
+        }
+
+        Debug.Log(powerupTag + " effect stopped at: " + Time.timeSinceLevelLoad);
 		stopEffectMethod(this);
 		
 		// Remove the powerup tag

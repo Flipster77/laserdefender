@@ -183,7 +183,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: cce4768b5b63ce7468228332a681561f, type: 3}
   deathExplosion: {fileID: 124752, guid: 99a0d91262b84a14aaa560cea54a4132, type: 2}
   basicLaser: {fileID: 188746, guid: 211ba3f6119a39945b1240b9fd39e2e4, type: 2}
-  firingRate: 1.5
+  firingRate: 1.2
   speed: 8
   numShotsPerFire: 2
 --- !u!198 &19892152

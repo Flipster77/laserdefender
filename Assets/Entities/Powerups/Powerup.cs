@@ -50,7 +50,7 @@ public abstract class Powerup : MonoBehaviour {
 		yMin = bottomLeftPos.y - spriteSize.y;
 	}
 	
-	public abstract void ActivatePowerup(PlayerShip playerShip);
+	public abstract void StartPowerupEffect(PlayerShip playerShip);
 	
 	public abstract string GetPowerupTag();
 }
