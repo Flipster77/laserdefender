@@ -506,7 +506,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22475682, guid: c06506849649fb64b8fceed42b7c1fa2, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 51.999973
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 22475682, guid: c06506849649fb64b8fceed42b7c1fa2, type: 2}
       propertyPath: m_SizeDelta.x
@@ -1117,7 +1117,8 @@ Prefab:
 
 
         Use some caution however, as the enemy wave will still be closing on your
-        position, and you may find yourself on a collision course if you''re not careful!'
+        position, and you may find yourself on a collision course with laser fire
+        if you''re not careful!'
       objectReference: {fileID: 0}
     - target: {fileID: 11471482, guid: 671b3332f4fc6e649b27f5d1dc8f80d5, type: 2}
       propertyPath: m_FontData.m_Font

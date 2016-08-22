@@ -10,7 +10,7 @@ public class WaveCounter : MonoBehaviour {
 	private string prefix;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		waveDisplay = gameObject.GetComponent<Text>();
 		prefix = waveDisplay.text;
 		

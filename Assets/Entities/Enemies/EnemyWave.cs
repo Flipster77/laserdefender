@@ -31,14 +31,14 @@ public class EnemyWave : Wave {
 			return false;
 		}
 	
+        // Check to see if all enemy formations are destroyed
 		foreach (EnemyFormation enemyFormation in enemyFormationInstances) {
 			//Debug.Log("Checking enemy formation: " + enemyFormation.GetInstanceID());
 			if (!enemyFormation.AllMembersDead()) {
 				return false;
 			}
 		}
-		
-		//Debug.Log("All enemies dead, clearing the list");
+
 		// All enemies are dead, clear the list
 		foreach (EnemyFormation enemyFormation in enemyFormationInstances) {
 			GameObject.Destroy(enemyFormation.gameObject);

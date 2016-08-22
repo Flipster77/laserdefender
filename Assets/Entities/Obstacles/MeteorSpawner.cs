@@ -11,7 +11,7 @@ public class MeteorSpawner : MonoBehaviour {
 
 	private float xMin;
 	private float xMax;
-	private float yMin;
+	//private float yMin; Not needed
 	private float yMax;
 
 	// Use this for initialization
@@ -34,7 +34,6 @@ public class MeteorSpawner : MonoBehaviour {
 		xMin = bottomLeftPos.x;
 		xMax = topRightPos.x;
 		
-		yMin = bottomLeftPos.y;
 		yMax = topRightPos.y;
 	}
 	

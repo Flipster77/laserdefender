@@ -50,8 +50,8 @@ public class EnemyFormation : MonoBehaviour {
 		
 		xMin = bottomLeftPos.x + width/2;
 		xMax = topRightPos.x - width/2;
-		
-		yMin = bottomLeftPos.y + height/2;
+
+        yMin = bottomLeftPos.y + height/2 +1.6f; // Give the player ship some space
 		yMax = topRightPos.y - height/2;
 	}
 	

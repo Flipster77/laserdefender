@@ -10,7 +10,8 @@ public class EnemySpawner : MonoBehaviour {
 	public GameObject mediumLeaderFormation;
 	
 	private WaveCounter waveCounter;
-	
+
+    private List<Wave> wavesToShuffle;
 	private Queue<Wave> waveQueue;
 	private Wave currentWave;
 	
@@ -37,6 +38,7 @@ public class EnemySpawner : MonoBehaviour {
 	}
 	
 	private void SetupWaves() {
+        wavesToShuffle = new List<Wave>();
 		waveQueue = new Queue<Wave>();
 		
 		EnemyWave tempWave = new EnemyWave();
@@ -68,19 +70,49 @@ public class EnemySpawner : MonoBehaviour {
 	private void StartNextWave() {
 		//Debug.Log ("Next wave starting " + gameObject.GetInstanceID());
 		
-		if (WaveCounter.GetWaveNumber() % waveQueue.Count == 0) {
+		/*if (WaveCounter.GetWaveNumber() % waveQueue.Count == 0) {
 			foreach (Wave wave in waveQueue) {
 				wave.IncreaseDescentSpeed(increaseSpeedAmount);
 			}
-		}
+		}*/
 		
-		DisplayWaveNumber();
+		UpdateWaveNumber();
 		currentWave = waveQueue.Dequeue();
 		currentWave.StartWave();
-		waveQueue.Enqueue(currentWave);
+
+        // If the wave queue is empty
+        if (waveQueue.Count == 0) {
+
+            // Shuffle the wave order
+            ShuffleWaves(wavesToShuffle);
+
+            // Increase the descent speed for the next lot of waves
+            // Add them back to the queue
+            foreach (Wave wave in wavesToShuffle) {
+                wave.IncreaseDescentSpeed(increaseSpeedAmount);
+                waveQueue.Enqueue(wave);
+            }
+            wavesToShuffle.Clear();
+
+            // Enqueue the current wave as the meteor wave is always last
+            waveQueue.Enqueue(currentWave);
+        }
+        // Add the current wave to be shuffled for the next round
+        else {
+            wavesToShuffle.Add(currentWave);
+        }
 	}
 	
-	private void DisplayWaveNumber() {
+	private void UpdateWaveNumber() {
 		waveCounter.ReachedNextWave();
 	}
+
+    private void ShuffleWaves(IList<Wave> waveList) {
+        for (int i = 0; i < waveList.Count; i++) {
+            Wave temp = waveList[i];
+            int randomIndex = Random.Range(i, waveList.Count);
+            waveList[i] = waveList[randomIndex];
+            waveList[randomIndex] = temp;
+        }
+    }
 }
