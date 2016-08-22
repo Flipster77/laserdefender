@@ -11,8 +11,6 @@ GameObject:
   - 222: {fileID: 22238926}
   - 114: {fileID: 11429516}
   - 114: {fileID: 11459270}
-  - 108: {fileID: 10849952}
-  - 114: {fileID: 11484570}
   m_Layer: 5
   m_Name: Quit button
   m_TagString: ShowOnPause
@@ -31,8 +29,6 @@ GameObject:
   - 222: {fileID: 22203188}
   - 114: {fileID: 11477028}
   - 114: {fileID: 11457106}
-  - 108: {fileID: 10832770}
-  - 114: {fileID: 11437002}
   m_Layer: 5
   m_Name: Resume button
   m_TagString: ShowOnPause
@@ -87,8 +83,6 @@ GameObject:
   - 222: {fileID: 22246640}
   - 114: {fileID: 11466804}
   - 114: {fileID: 11488324}
-  - 108: {fileID: 10831954}
-  - 114: {fileID: 11403114}
   m_Layer: 5
   m_Name: Menu button
   m_TagString: ShowOnPause
@@ -113,105 +107,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &10831954
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196422}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 0.99607843, g: 0.8039216, b: 0, a: 1}
-  m_Intensity: 7.6
-  m_Range: 2.5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!108 &10832770
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114936}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 0.99607843, g: 0.8039216, b: 0, a: 1}
-  m_Intensity: 7.6
-  m_Range: 2.5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!108 &10849952
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111646}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 0.99607843, g: 0.8039216, b: 0, a: 1}
-  m_Intensity: 7.6
-  m_Range: 2.5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
 --- !u!114 &11402738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,18 +140,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Paused
---- !u!114 &11403114
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76b566300f9cf84f85af29d76ad785e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSound: {fileID: 8300000, guid: da969c3093c73c6488a1ef5360627384, type: 3}
 --- !u!114 &11429516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,7 +160,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 180d381d50871714fa76b26a34def754, type: 3}
+    m_Font: {fileID: 12800000, guid: 39289611a07328248a54fcfebcee1169, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -290,18 +173,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Quit
---- !u!114 &11437002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76b566300f9cf84f85af29d76ad785e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSound: {fileID: 8300000, guid: da969c3093c73c6488a1ef5360627384, type: 3}
 --- !u!114 &11445782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -453,7 +324,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 180d381d50871714fa76b26a34def754, type: 3}
+    m_Font: {fileID: 12800000, guid: 39289611a07328248a54fcfebcee1169, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -488,7 +359,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 180d381d50871714fa76b26a34def754, type: 3}
+    m_Font: {fileID: 12800000, guid: 39289611a07328248a54fcfebcee1169, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -503,18 +374,6 @@ MonoBehaviour:
   m_Text: 'Resume
 
 '
---- !u!114 &11484570
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76b566300f9cf84f85af29d76ad785e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSound: {fileID: 8300000, guid: da969c3093c73c6488a1ef5360627384, type: 3}
 --- !u!114 &11488034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -605,11 +464,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -653,7 +512,7 @@ Canvas:
   m_GameObject: {fileID: 164450}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 50
   m_PixelPerfect: 0
@@ -662,7 +521,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &22478958
 RectTransform:

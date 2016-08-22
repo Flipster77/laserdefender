@@ -120,12 +120,12 @@ public class PlayerShip : Ship {
         // If the ship already has the powerup, reset the powerup timer
 		if (currentPowerups.ContainsKey(powerupTag)) {
             currentPowerups[powerupTag] = effectLength;
-            Debug.Log(powerupTag + " effect extended at: " + Time.timeSinceLevelLoad);
+            //Debug.Log(powerupTag + " effect extended at: " + Time.timeSinceLevelLoad);
         }
         // Otherwise start the powerup timer
         else {
             currentPowerups.Add(powerupTag, effectLength);
-            Debug.Log(powerupTag + " effect started at: " + Time.timeSinceLevelLoad);
+            //Debug.Log(powerupTag + " effect started at: " + Time.timeSinceLevelLoad);
 
             // Start a coroutine to stop the powerup effect after its timer runs out
             StartCoroutine(StopPowerupEffect(powerupTag, effectLength, stopEffectMethod));
@@ -141,7 +141,7 @@ public class PlayerShip : Ship {
             yield return null;
         }
 
-        Debug.Log(powerupTag + " effect stopped at: " + Time.timeSinceLevelLoad);
+        //Debug.Log(powerupTag + " effect stopped at: " + Time.timeSinceLevelLoad);
 		stopEffectMethod(this);
 		
 		// Remove the powerup tag

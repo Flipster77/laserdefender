@@ -40,6 +40,11 @@ public class PauseMenu : MonoBehaviour {
         gamePaused = false;
     }
 
+    public void ResetTimeScale() {
+        Debug.Log("Resetting timescale");
+        Time.timeScale = 1f;
+    }
+
     private void ShowPauseMenu() {
 
         foreach (GameObject obj in pauseMenuObjects) {

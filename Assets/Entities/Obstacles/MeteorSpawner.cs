@@ -5,7 +5,6 @@ public class MeteorSpawner : MonoBehaviour {
 
 	public GameObject[] meteorPrefabs;
 	public GameObject meteorWarning;
-	public GameObject canvas;
 	
 	private bool meteorStormFinished;
 
@@ -48,8 +47,7 @@ public class MeteorSpawner : MonoBehaviour {
 	
 	protected IEnumerator DisplayMeteorWarning() {
 		GameObject warningText = Instantiate(meteorWarning, meteorWarning.transform.position, Quaternion.identity) as GameObject;
-		//GameObject canvas
-		warningText.transform.SetParent(canvas.transform, false);
+		warningText.transform.SetParent(this.transform, false);
 		yield return new WaitForSeconds(3);
 		Destroy(warningText);
 		
