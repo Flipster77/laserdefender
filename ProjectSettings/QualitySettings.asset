@@ -176,7 +176,7 @@ QualitySettings:
     Tizen: 2
     WP8: 3
     Web: 3
-    WebGL: 0
+    WebGL: 3
     Windows Store Apps: 3
     XBOX360: 3
     XboxOne: 3
