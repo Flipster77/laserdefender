@@ -1345,7 +1345,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://freesound.org/people/qubodup/
+      value: https://freesound.org/people/qubodup/
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -2730,7 +2730,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://creativecommons.org/publicdomain/zero/1.0/
+      value: https://creativecommons.org/publicdomain/zero/1.0/
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -2973,7 +2973,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://www.dafont.com/peter-szabo-lencz.d2765
+      value: https://www.dafont.com/peter-szabo-lencz.d2765
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -3411,7 +3411,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://creativecommons.org/licenses/by/3.0/legalcode
+      value: https://creativecommons.org/licenses/by/3.0/legalcode
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -3481,7 +3481,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://www.dafont.com/retro-computer.font
+      value: https://www.dafont.com/retro-computer.font
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -4583,7 +4583,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://www.dafont.com/jimmy-campbell.d5241
+      value: https://www.dafont.com/jimmy-campbell.d5241
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -4653,7 +4653,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://www.dafont.com/arcadepix-plus.font
+      value: https://www.dafont.com/arcadepix-plus.font
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -5703,7 +5703,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://www.freesound.org/people/cabled_mess/packs/20088/
+      value: https://www.freesound.org/people/cabled_mess/packs/20088/
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
@@ -5804,7 +5804,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417144, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: LinkAddress
-      value: http://www.freesound.org/people/cabled_mess/
+      value: https://www.freesound.org/people/cabled_mess/
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 9046b3892bb8bcf488493892bd97bc0c, type: 2}
       propertyPath: m_Name
